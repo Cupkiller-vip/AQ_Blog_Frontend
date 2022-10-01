@@ -1,0 +1,11 @@
+<template>
+  <div></div>
+</template>
+<script lang="ts" setup>
+import { ref, type Ref } from "vue";
+import Request from "@/utils/axios";
+
+const works: Ref<unknown> = ref([]);
+works.value = (await Request.post("http://127.0.0.1:9000/api/essays")).data;
+</script>
+<style scoped></style>
