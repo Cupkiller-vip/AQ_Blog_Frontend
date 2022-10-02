@@ -7,7 +7,9 @@
         class="work"
         @click="goWork(work.work_id, work.kind)"
       >
-        <img class="image" :src="work.imageUrl" alt="workImg" />
+        <div class="imageBox">
+          <img class="image" :src="work.imageUrl" alt="workImg" />
+        </div>
         <span class="title">{{ work.title }}</span>
         <div class="content">{{ work.content }}</div>
       </li>
@@ -117,9 +119,20 @@ function goWork(work_id: string | undefined, kind: string) {
   cursor: pointer;
 }
 
-.image {
+.imageBox {
   height: 72%;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.work:hover .image {
+  transform: scale(1.1);
 }
 
 .title {
