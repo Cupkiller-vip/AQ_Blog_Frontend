@@ -1,6 +1,6 @@
 <template>
   <div class="hotWorks">
-    <div class="hotLogo"></div>
+    <div class="hotLogo">{{ logoTitle }}</div>
     <ul class="works">
       <li
         v-for="work in works"
@@ -64,6 +64,8 @@ const works = [
     kind: "a",
   },
 ];
+const logoTitle = "热门内容";
+
 function goWork(work_id: string | undefined, kind: string) {
   switch (kind) {
     case "a":
@@ -97,15 +99,45 @@ function goWork(work_id: string | undefined, kind: string) {
 }
 </script>
 <style scoped>
+@keyframes borderRotation {
+  0% {
+    border-image: linear-gradient(#e66465, #9198e5) 1;
+  }
+
+  25% {
+    border-image: linear-gradient(to left, #e66465, #9198e5) 1;
+  }
+
+  50% {
+    border-image: linear-gradient(to top, #e66465, #9198e5) 1;
+  }
+
+  75% {
+    border-image: linear-gradient(to right, #e66465, #9198e5) 1;
+  }
+
+  100% {
+    border-image: linear-gradient(#e66465, #9198e5) 1;
+  }
+}
+
 .hotWorks {
   display: flex;
+  flex-direction: column;
   height: 480px;
 }
+
+.hotLogo {
+  display: flex;
+  margin: auto;
+  font-size: 48px;
+}
+
 .works {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  margin: 0 auto auto;
   width: 90%;
   height: 360px;
 }
@@ -114,9 +146,17 @@ function goWork(work_id: string | undefined, kind: string) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 24%;
-  height: 90%;
+  width: calc(24% - 6px);
+  height: 100%;
   cursor: pointer;
+  border: 3px solid;
+  border-radius: 5px;
+  border-image: linear-gradient(#e66465, #9198e5) 1;
+  transition: all 0.5s ease;
+}
+
+.work:hover {
+  animation: borderRotation 2s linear infinite;
 }
 
 .imageBox {
