@@ -101,23 +101,23 @@ function goWork(work_id: string | undefined, kind: string) {
 <style scoped>
 @keyframes borderRotation {
   0% {
-    border-image: linear-gradient(#e66465, #9198e5) 1;
+    border-image: linear-gradient(aquamarine, gold) 1;
   }
 
   25% {
-    border-image: linear-gradient(to left, #e66465, #9198e5) 1;
+    border-image: linear-gradient(to left, aquamarine, gold) 1;
   }
 
   50% {
-    border-image: linear-gradient(to top, #e66465, #9198e5) 1;
+    border-image: linear-gradient(to top, aquamarine, gold) 1;
   }
 
   75% {
-    border-image: linear-gradient(to right, #e66465, #9198e5) 1;
+    border-image: linear-gradient(to right, aquamarine, gold) 1;
   }
 
   100% {
-    border-image: linear-gradient(#e66465, #9198e5) 1;
+    border-image: linear-gradient(aquamarine, gold) 1;
   }
 }
 
@@ -151,7 +151,7 @@ function goWork(work_id: string | undefined, kind: string) {
   cursor: pointer;
   border: 3px solid;
   border-radius: 5px;
-  border-image: linear-gradient(#e66465, #9198e5) 1;
+  border-image: linear-gradient(aquamarine, gold) 1;
   transition: all 0.5s ease;
 }
 
