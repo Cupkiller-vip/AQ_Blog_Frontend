@@ -6,7 +6,7 @@ import Header from "./components/Header.vue";
 <template>
   <Header></Header>
   <RouterView v-slot="{ Component }">
-    <Transition name="fade">
+    <Transition name="fade" mode="out-in">
       <Suspense>
         <component :is="Component"></component>
       </Suspense>
