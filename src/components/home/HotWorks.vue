@@ -126,7 +126,7 @@ function goWork(work_id: string | undefined, kind: string) {
 .hotWorks {
   display: flex;
   flex-direction: column;
-  height: 480px;
+  height: 450px;
 }
 
 .hotLogo {
@@ -139,7 +139,7 @@ function goWork(work_id: string | undefined, kind: string) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto auto;
+  margin: 0 auto;
   width: 90%;
   height: 360px;
 }
