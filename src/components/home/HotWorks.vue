@@ -8,7 +8,11 @@
         @click="goWork(work.work_id, work.kind)"
       >
         <div class="imageBox">
-          <img class="image" :src="work.imageUrl || defaultImage" alt="workImg" />
+          <img
+            class="image"
+            :src="work.imageUrl || defaultImage"
+            alt="workImg"
+          />
         </div>
         <span class="title">{{ work.title }}</span>
         <div class="content">{{ work.content }}</div>
@@ -103,23 +107,46 @@ function goWork(work_id: string | undefined, kind: string) {
 <style scoped>
 @keyframes borderRotation {
   0% {
-    border-image: linear-gradient(aquamarine, gold) 1;
+    border-image: linear-gradient(
+        rgba(128, 255, 212, 0.5),
+        rgba(255, 215, 0, 0.5)
+      )
+      1;
   }
 
   25% {
-    border-image: linear-gradient(to left, aquamarine, gold) 1;
+    border-image: linear-gradient(
+        to left,
+        rgba(128, 255, 212, 0.5),
+        rgba(255, 215, 0, 0.5)
+      )
+      1;
   }
 
   50% {
-    border-image: linear-gradient(to top, aquamarine, gold) 1;
+    border-image: linear-gradient(
+        to top,
+        rgba(128, 255, 212, 0.5),
+        rgba(255, 215, 0, 0.5)
+      )
+      1;
   }
 
   75% {
-    border-image: linear-gradient(to right, aquamarine, gold) 1;
+    border-image: linear-gradient(
+        to right,
+        rgba(128, 255, 212, 0.5),
+        rgba(255, 215, 0, 0.5)
+      )
+      1;
   }
 
   100% {
-    border-image: linear-gradient(aquamarine, gold) 1;
+    border-image: linear-gradient(
+        rgba(128, 255, 212, 0.5),
+        rgba(255, 215, 0, 0.5)
+      )
+      1;
   }
 }
 
@@ -153,7 +180,11 @@ function goWork(work_id: string | undefined, kind: string) {
   cursor: pointer;
   border: 3px solid;
   border-radius: 5px;
-  border-image: linear-gradient(aquamarine, gold) 1;
+  border-image: linear-gradient(
+      rgba(128, 255, 212, 0.5),
+      rgba(255, 215, 0, 0.5)
+    )
+    1;
   transition: all 0.5s ease;
 }
 
