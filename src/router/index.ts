@@ -1,9 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
+import type { RouteLocationRaw } from "vue-router";
 
 const routes = [
   {
     path: "/",
-    redirect: "/home",
+    redirect: (to: RouteLocationRaw) => {
+      return {
+        path: "/home",
+      };
+    },
   },
   {
     name: "home",
