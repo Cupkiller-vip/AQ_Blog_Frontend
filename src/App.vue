@@ -4,15 +4,15 @@ import Header from "./components/Header.vue";
 </script>
 
 <template>
-  <Header></Header>
   <RouterView v-slot="{ Component }">
+    <Header></Header>
     <Transition name="fade" mode="out-in">
       <Suspense>
         <component :is="Component"></component>
       </Suspense>
     </Transition>
+    <Footer></Footer>
   </RouterView>
-  <Footer></Footer>
 </template>
 
 <style scoped></style>
