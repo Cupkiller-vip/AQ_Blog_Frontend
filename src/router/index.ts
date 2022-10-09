@@ -13,39 +13,57 @@ const routes = [
   {
     name: "home",
     path: "/home",
-    component: () => import("@/views/Home.vue"),
+    component: () => import("@/views/Home/Index.vue"),
   },
   {
-    name: "articles",
     path: "/articles",
-    component: () => import("@/views/Articles.vue"),
+    component: () => import("@/views/Articles/Index.vue"),
+    children: [
+      {
+        name: "articles",
+        path: "",
+        component: () => import("@/views/Articles/Articles.vue"),
+      },
+      {
+        path: "work",
+        component: () => import("@/views/Work/Index.vue"),
+      },
+    ],
   },
   {
-    path: "/articles/work",
-    component: () => import("@/views/Work/Index.vue"),
-  },
-  {
-    name: "essays",
     path: "/essays",
-    component: () => import("@/views/Essays.vue"),
+    component: () => import("@/views/Essays/Index.vue"),
+    children: [
+      {
+        name: "essays",
+        path: "",
+        component: () => import("@/views/Essays/Essays.vue"),
+      },
+      {
+        path: "work",
+        component: () => import("@/views/Work/Index.vue"),
+      },
+    ],
   },
   {
-    path: "/essays/work",
-    component: () => import("@/views/Work/Index.vue"),
-  },
-  {
-    name: "novels",
     path: "/novels",
-    component: () => import("@/views/Novels.vue"),
-  },
-  {
-    path: "/novels/work",
-    component: () => import("@/views/Work/Index.vue"),
+    component: () => import("@/views/Novels/Index.vue"),
+    children: [
+      {
+        name: "novels",
+        path: "",
+        component: () => import("@/views/Novels/Novels.vue"),
+      },
+      {
+        path: "work",
+        component: () => import("@/views/Work/Index.vue"),
+      },
+    ],
   },
   {
     name: "about",
     path: "/about",
-    component: () => import("@/views/About.vue"),
+    component: () => import("@/views/About/Index.vue"),
   },
 ];
 

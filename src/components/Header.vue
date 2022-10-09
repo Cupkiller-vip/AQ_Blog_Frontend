@@ -44,7 +44,7 @@ const headerList = ref([
 const routesName = ["home", "articles", "essays", "novels", "about"];
 
 async function select(index: number) {
-  await Router.push({ name: routesName[index] });
+  await Router.push({ path: `/${routesName[index]}` });
 }
 
 function goGithub() {
