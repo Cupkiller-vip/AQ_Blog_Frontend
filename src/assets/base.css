@@ -28,7 +28,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #F6F5F0;
+  background-color: #f6f5f0;
 }
 
 /*行内块元素*/
@@ -66,4 +66,10 @@ textarea {
 i {
   /*文字样式*/
   font-style: normal;
+}
+
+.textOverflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }

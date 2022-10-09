@@ -12,7 +12,7 @@
         <ul class="works">
           <li v-for="work in works" class="work" @click="goWork(work.work_id)">
             <img :src="postIcon" alt="postIcon" class="postIcon" />
-            <div class="workTitle">
+            <div class="workTitle textOverflow">
               121212121212121212121212121212{{ work.title }}
             </div>
           </li>
@@ -115,8 +115,5 @@ function goWork(work_id: string) {
 .workTitle {
   margin-left: 18px;
   font-size: 24px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 </style>
