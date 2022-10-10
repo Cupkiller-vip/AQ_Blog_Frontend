@@ -4,7 +4,7 @@
     <ul class="works">
       <li
         v-for="work in works"
-        class="work"
+        class="work borderColor"
         @click="goWork(work.work_id, work.kind)"
       >
         <div class="imageBox">
@@ -177,18 +177,7 @@ function goWork(work_id: string | undefined, kind: string) {
   width: calc(24% - 6px);
   height: 100%;
   cursor: pointer;
-  border: 3px solid;
   border-radius: 5px;
-  border-image: linear-gradient(
-      rgba(128, 255, 212, 0.5),
-      rgba(255, 215, 0, 0.5)
-    )
-    1;
-  transition: all 0.5s ease;
-}
-
-.work:hover {
-  animation: borderRotation 2s linear infinite;
 }
 
 .imageBox {
