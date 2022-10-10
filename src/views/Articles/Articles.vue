@@ -2,7 +2,7 @@
   <div class="articles">
     <div class="articlesLogo">{{ articlesLogo }}</div>
     <ul class="themes">
-      <li v-for="theme in themes" class="theme">
+      <li v-for="theme in themes" class="theme borderColor">
         <img
           class="themeImage"
           :src="theme.imageUrl || defaultImage"
@@ -105,7 +105,7 @@ function goWork(work_id: string) {
   display: flex;
   align-items: center;
   cursor: pointer;
-  width: 432px;
+  width: 400px;
 }
 
 .postIcon {

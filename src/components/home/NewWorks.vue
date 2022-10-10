@@ -4,7 +4,7 @@
     <ul class="works">
       <li
         v-for="work in works"
-        class="work"
+        class="work borderColor"
         @click="goWork(work.work_id, work.kind)"
       >
         <img class="image" :src="work.image || defaultImage" alt="workImg" />
@@ -92,7 +92,6 @@ function goWork(work_id: string, kind: string) {
   width: 100%;
   height: 23%;
   cursor: pointer;
-  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
 }
 
 .image {
