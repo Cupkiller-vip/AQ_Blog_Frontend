@@ -7,7 +7,7 @@
         class="work borderColor"
         @click="goWork(work.work_id, work.kind)"
       >
-        <img class="image" :src="work.image || defaultImage" alt="workImg" />
+        <img class="image" :src="work.image || defaultImage" alt="workImage" />
         <div class="text">
           <span class="title">{{ work.work_title }}</span>
           <div class="content">{{ work.content }}</div>

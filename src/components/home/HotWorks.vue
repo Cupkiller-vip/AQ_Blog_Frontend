@@ -11,7 +11,7 @@
           <img
             class="image"
             :src="work.imageUrl || defaultImage"
-            alt="workImg"
+            alt="workImage"
           />
         </div>
         <span class="title">{{ work.title }}</span>
