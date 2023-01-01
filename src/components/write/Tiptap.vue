@@ -47,23 +47,30 @@ onBeforeUnmount(() => {
 </script>
 <style scoped>
 .editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   color: #0d0d0d;
   background-color: #fff;
   border: 3px solid #0d0d0d;
   border-radius: 4px;
   width: 900px;
+  min-height: 900px;
   margin: 120px;
   overflow: hidden;
 }
 .editor_header {
-  padding: 15px 30px;
+  flex: 1;
+  padding: 0 30px;
   border-bottom: 3px solid #0d0d0d;
 }
 .editor_content {
+  flex: 28;
   padding: 15px 30px;
 }
 .editor_footer {
-  padding: 15px 30px;
+  flex: 1;
+  padding: 0 30px;
 }
 :deep().ProseMirror:focus {
   outline: none;
