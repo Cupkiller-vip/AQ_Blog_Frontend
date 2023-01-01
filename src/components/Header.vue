@@ -10,7 +10,7 @@
         {{ item.text }}
       </li>
     </ul>
-    <div class="aqLogo">{{ name }}</div>
+    <div class="aqLogo" @click="goWrite">{{ name }}</div>
     <img class="githubLogo" :src="githubLogo" @click="goGithub" />
   </div>
 </template>
@@ -45,6 +45,10 @@ const routesName = ["home", "articles", "essays", "novels", "about"];
 
 async function select(index: number) {
   await Router.push({ path: `/${routesName[index]}` });
+}
+
+function goWrite() {
+  Router.push({ path: `/write` });
 }
 
 function goGithub() {
